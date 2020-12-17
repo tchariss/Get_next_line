@@ -6,7 +6,7 @@
 /*   By: tchariss <tchariss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 13:31:45 by tchariss          #+#    #+#             */
-/*   Updated: 2020/12/07 17:50:28 by tchariss         ###   ########.fr       */
+/*   Updated: 2020/12/17 11:35:43 by tchariss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,4 +87,23 @@ char	*ft_strchr(const char *s, int c)
 		s++;
 	}
 	return (0);
+}
+
+char	*strcopy(char *s1, const char *s2)
+{
+	while (*s2 != '\0')
+	{
+		*s1++ = *s2++;	
+	}
+	*s1 = '\0';
+	return (s1);
+}
+
+void	strclear(char *s)
+{
+	while(*s != '\0')
+	{
+		*s = '\0';
+		s++;	
+	}
 }
