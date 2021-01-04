@@ -43,7 +43,7 @@ int			proverka_static_memory(char *static_memory, char **line)
 		if ((next_line = ft_strchr(static_memory, '\n')))
 		{
 			*next_line = '\0';
-			if (!(*line = strdup(static_memory)))
+			if (!(*line = ft_strdup(static_memory)))
 				return (-1);
 			ft_strcopy(static_memory, ++next_line);
 			return (1);
